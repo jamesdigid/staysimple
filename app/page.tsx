@@ -1,69 +1,3 @@
-const features = [
-  {
-    title: "Automate Workflows",
-    description:
-      "Eliminate repetitive tasks with intelligent agents that learn your processes and run them reliably.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Integrate Everything",
-    description:
-      "Connect your existing tools — CRMs, email, spreadsheets, and APIs — into one seamless automation layer.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: "Scale Effortlessly",
-    description:
-      "Grow without adding headcount. Our AI solutions adapt as your business evolves and demands increase.",
-    icon: (
-      <svg
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
-        />
-      </svg>
-    ),
-  },
-] as const;
-
 export default function Home() {
   return (
     <div className="flex min-h-full flex-col">
@@ -124,7 +58,15 @@ export default function Home() {
         </div>
       </section>
 
-     
+      <footer className="border-t border-white/10 px-6 py-8">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
+          <p className="text-sm text-slate-400">
+            &copy; {new Date().getFullYear()} StaySimple | All rights
+            reserved.
+          </p>
+          <p className="text-sm text-slate-500">Simple AI automation</p>
+        </div>
+      </footer>
     </div>
   );
 }
