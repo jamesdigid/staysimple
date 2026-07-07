@@ -1,72 +1,48 @@
 export default function Home() {
   return (
-    <div className="flex min-h-full flex-col">
-
-
-      {/* Hero */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-24 sm:pb-32 sm:pt-32">
+    <div className="flex h-full flex-col overflow-hidden">
+      <main className="flex flex-1 items-center justify-center px-6">
+        <section className="relative w-full max-w-5xl overflow-hidden py-10 text-center sm:py-14">
         <div
           className="pointer-events-none absolute inset-0 -z-10"
           aria-hidden="true"
         >
-          <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-b from-blue-200/60 via-blue-100/30 to-transparent blur-3xl" />
-        </div>
+            <div className="absolute left-1/2 top-[-2rem] h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-white/8 blur-3xl" />
+            <div className="absolute left-1/2 top-[-1rem] h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-slate-300/10 blur-3xl" />
+            <div className="absolute left-1/2 top-8 h-[30rem] w-[46rem] -translate-x-1/2 rounded-full bg-black/35 blur-[120px]" />
+            <div className="absolute left-1/2 top-28 h-[10rem] w-[10rem] -translate-x-1/2 rounded-full bg-white/5 blur-2xl" />
+          </div>
 
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 inline-block rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium text-primary">
+          <p className="mb-4 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-blue-200 shadow-[0_0_30px_rgba(79,140,255,0.12)] backdrop-blur">
             AI Automation for Modern Businesses
           </p>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl sm:leading-tight">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl sm:leading-tight">
             Keep it simple.
             <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
               Automate everything.
             </span>
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            StaySimple.AI builds intelligent automation that fits your business —
-            no complexity, no bloat. Just AI that works.
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+            StaySimple.AI builds intelligent automation that fits your business
+            with less complexity, less friction, and more impact.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#contact"
-              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-primary px-8 text-base font-medium text-white transition-colors hover:bg-primary-dark sm:w-auto"
+              href="tel:+15615567310"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-primary px-8 text-base font-medium text-white shadow-[0_18px_50px_rgba(79,140,255,0.28)] transition-colors hover:bg-primary-dark sm:w-auto"
             >
-              Book a Demo
+              Call (561) 556-7310
             </a>
             <a
-              href="#features"
-              className="inline-flex h-12 w-full items-center justify-center rounded-full border border-border bg-card px-8 text-base font-medium text-foreground transition-colors hover:border-zinc-300 hover:text-foreground focus-visible:border-zinc-300 focus-visible:bg-zinc-100 focus-visible:text-foreground sm:w-auto"
+              href="#"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 text-base font-medium text-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition-colors hover:border-white/20 hover:bg-white/10 hover:text-white focus-visible:border-white/20 focus-visible:bg-white/10 focus-visible:text-white sm:w-auto"
             >
               Learn More
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section id="features" className="bg-card px-6 py-20 sm:py-28">
-        <div className="mx-auto max-w-6xl">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Automation that delivers
-            </h2>
-            <p className="mt-4 text-lg text-muted">
-              We handle the complexity so you can focus on what matters most.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 px-6 py-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="text-sm text-slate-400">
-            &copy; {new Date().getFullYear()} StaySimple | All rights
-            reserved.
-          </p>
-          <p className="text-sm text-slate-500">Simple AI automation</p>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
   );
 }
