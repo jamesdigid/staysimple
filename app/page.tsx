@@ -1,47 +1,102 @@
+const tiles = [
+  {
+    title: "Workflow Automation",
+    description: "Replace repetitive ops with simple, reliable AI flows.",
+  },
+  {
+    title: "System Connections",
+    description: "Connect your tools, inbox, CRM, and spreadsheets.",
+  },
+  {
+    title: "Scale With Ease",
+    description: "Grow output without growing the overhead.",
+  },
+] as const;
+
 export default function Home() {
   return (
-    <div className="flex h-full flex-col overflow-hidden">
-      <main className="flex flex-1 items-center justify-center px-6">
-        <section className="relative w-full max-w-5xl overflow-hidden py-10 text-center sm:py-14">
-        <div
-          className="pointer-events-none absolute inset-0 -z-10"
-          aria-hidden="true"
-        >
-            <div className="absolute left-1/2 top-[-2rem] h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-white/8 blur-3xl" />
-            <div className="absolute left-1/2 top-[-1rem] h-[22rem] w-[22rem] -translate-x-1/2 rounded-full bg-slate-300/10 blur-3xl" />
-            <div className="absolute left-1/2 top-8 h-[30rem] w-[46rem] -translate-x-1/2 rounded-full bg-black/35 blur-[120px]" />
-            <div className="absolute left-1/2 top-28 h-[10rem] w-[10rem] -translate-x-1/2 rounded-full bg-white/5 blur-2xl" />
+    <div className="page-shell">
+      <main className="page-main">
+        <section id="top" className="lander-section hero-section">
+          <div className="spotlight-layer" aria-hidden="true">
+            <div className="hero-glow-lg" />
+            <div className="hero-glow-md" />
+            <div className="hero-shadow" />
+            <div className="hero-highlight" />
           </div>
 
-          <p className="mb-4 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-medium text-blue-200 shadow-[0_0_30px_rgba(79,140,255,0.12)] backdrop-blur">
-            AI Automation for Modern Businesses
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl sm:leading-tight">
-            Keep it simple.
-            <br />
-            <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
-              Automate everything.
-            </span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
-            StaySimple.AI builds intelligent automation that fits your business
-            with less complexity, less friction, and more impact.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="tel:+15615567310"
-              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-primary px-8 text-base font-medium text-white shadow-[0_18px_50px_rgba(79,140,255,0.28)] transition-colors hover:bg-primary-dark sm:w-auto"
-            >
-              Call (561) 556-7310
-            </a>
-            <a
-              href="#"
-              className="inline-flex h-12 w-full items-center justify-center rounded-full border border-white/10 bg-white/5 px-8 text-base font-medium text-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition-colors hover:border-white/20 hover:bg-white/10 hover:text-white focus-visible:border-white/20 focus-visible:bg-white/10 focus-visible:text-white sm:w-auto"
-            >
-              Learn More
-            </a>
+          <div className="hero-content">
+            <p className="eyebrow">
+              AI Automation for Modern Businesses
+            </p>
+            <h1 className="hero-title">
+              Keep it simple.
+              <br />
+              <span className="gradient-text">Automate everything.</span>
+            </h1>
+            <p className="body-copy">
+              StaySimple.AI builds intelligent automation that fits your
+              business with less complexity, less friction, and more impact.
+            </p>
+            <div className="cta-row">
+              <a href="tel:+15615567310" className="btn btn-primary">
+                Call (561) 556-7310
+              </a>
+              <a href="#tiles" className="btn btn-secondary">
+                Learn More
+              </a>
+            </div>
           </div>
         </section>
+
+        <section id="tiles" className="lander-section tiles-section">
+          <div className="spotlight-layer" aria-hidden="true">
+            <div className="tile-parallax-orb tile-orb-primary" />
+            <div className="tile-parallax-orb tile-orb-secondary" />
+          </div>
+
+          <div className="tile-section-content section-content">
+            <div className="section-header">
+              <p className="section-kicker">What we simplify</p>
+              <h2 className="section-title">
+                A cleaner path to automation
+              </h2>
+            </div>
+            <div className="tiles-grid">
+              {tiles.map((tile) => (
+                <article key={tile.title} className="tile-card">
+                  <div className="tile-accent" />
+                  <h3 className="tile-title">{tile.title}</h3>
+                  <p className="tile-copy">{tile.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <footer className="footer-section">
+          <div className="footer-content">
+            <div className="subscribe-block">
+              <p className="subscribe-label">Get latest news and updates</p>
+              <form action="#" className="subscribe-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="subscribe-input"
+              />
+              <button type="submit" className="btn-secondary btn-subscribe">
+                Subscribe
+              </button>
+            </form>
+            </div>
+            <div className="footer-bottom">
+              <p>&copy; 2026 StaySimple.AI. All rights reserved.</p>
+              <a href="#top" className="footer-link">
+                Back to top
+              </a>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
